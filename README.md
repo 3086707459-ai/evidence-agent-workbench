@@ -82,8 +82,8 @@ evidence-agent run '比较 Atlas 和 Boreal 的离线部署、审计和三年成
 ## 测试与评测
 
 ```bash
-ruff check src tests
-ruff format --check src tests
+ruff check src tests scripts
+ruff format --check src tests scripts
 pytest --cov=evidence_agent --cov-report=term-missing --cov-report=xml:out/coverage.xml
 evidence-agent evaluate --output out/evaluation.json
 ```

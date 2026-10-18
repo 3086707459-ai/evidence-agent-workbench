@@ -16,9 +16,9 @@
 | 真实模型语义质量 | 未执行 | 无模型密钥；只有官方 SDK 的 mock transport 协议测试 |
 | 浏览器交互/响应式视觉验收 | 未完成 | 已验证静态资源 HTTP 返回与 JS 语法，浏览器无法连接当前临时服务 |
 | Docker 构建 / systemd 启动 | 未执行 | 当前环境未提供 Docker/systemd 运行条件 |
-| GitHub Actions | 待上传后执行 | 已配置 Python 3.11 / 3.12 / 3.13 matrix；本机仅执行 3.12 |
+| GitHub Actions | 3 / 3 环境通过 | Python 3.11、3.12、3.13 均通过 lint、61 项测试和 8 项评测；[查看运行记录](https://github.com/3086707459-ai/evidence-agent-workbench/actions/runs/39085917091) |
 
-环境：Python 3.12.14，FastAPI 0.143.3，OpenAI Python SDK 2.54.0，pytest 9.1.1。测试有一条上游 Starlette/httpx 弃用提示，未影响结果；升级依赖时应复测 TestClient 兼容性。
+本机环境：Python 3.12.14，FastAPI 0.143.3，OpenAI Python SDK 2.54.0，pytest 9.1.1。覆盖率表格为本机结果；CI 中 Python 3.11 为 935 / 976，3.12 与 3.13 为 937 / 976，均约 96%。测试有一条上游 Starlette/httpx 弃用提示，未影响结果；升级依赖时应复测 TestClient 兼容性。
 
 ## 重新验证
 
