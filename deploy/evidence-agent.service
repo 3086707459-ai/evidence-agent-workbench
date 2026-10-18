@@ -1,0 +1,29 @@
+[Unit]
+Description=Evidence Agent Workbench
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=evidence-agent
+Group=evidence-agent
+WorkingDirectory=/opt/evidence-agent
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=AGENT_DB=/var/lib/evidence-agent/agent.db
+Environment=AGENT_CORPUS=/opt/evidence-agent/corpus
+EnvironmentFile=-/etc/evidence-agent.env
+ExecStart=/opt/evidence-agent/.venv/bin/evidence-agent serve --host 127.0.0.1 --port 8090
+StateDirectory=evidence-agent
+StateDirectoryMode=0700
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=15
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/evidence-agent
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

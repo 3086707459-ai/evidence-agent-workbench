@@ -1,0 +1,12 @@
+{
+  "actual_http_server": true,
+  "health": {
+    "healthy": true,
+    "database": true,
+    "dispatcher_enabled": true
+  },
+  "static_ui_served": true,
+  "approval_and_delivery": "passed",
+  "sse_trace": "passed",
+  "replay_no_extra_ticket": "passed"
+}

@@ -1,0 +1,55 @@
+{
+  "category": "structural_and_engineering_evaluation",
+  "provider": "demo",
+  "live_model_tested": false,
+  "semantic_quality_scored": false,
+  "notice": "Demo is rule-based. These checks are not model accuracy, factuality or prompt-injection robustness scores.",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "verbatim_citations_and_source_diversity",
+      "passed": true,
+      "detail": {
+        "citation_count": 3,
+        "source_count": 3,
+        "check": "provenance_passed"
+      }
+    },
+    {
+      "name": "approval_blocks_side_effect",
+      "passed": true,
+      "detail": "No ticket exists before approval"
+    },
+    {
+      "name": "approval_binds_payload_digest",
+      "passed": true,
+      "detail": "Changed action payload denied"
+    },
+    {
+      "name": "bounded_calculator",
+      "passed": true,
+      "detail": "Decimal arithmetic matches synthetic fixture costs"
+    },
+    {
+      "name": "local_outbox_idempotency",
+      "passed": true,
+      "detail": "One local ticket after duplicate approval and delivery attempts"
+    },
+    {
+      "name": "deterministic_receipt_replay",
+      "passed": true,
+      "detail": "Same report on frozen evidence; zero model calls; no replayed side effect"
+    },
+    {
+      "name": "audit_chain_integrity",
+      "passed": true,
+      "detail": "All persisted events form a valid local hash chain"
+    },
+    {
+      "name": "missing_evidence_abstention",
+      "passed": true,
+      "detail": "Unsupported fixture question produced an explicit abstention"
+    }
+  ]
+}

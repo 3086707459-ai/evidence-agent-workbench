@@ -1,0 +1,122 @@
+{
+  "id": "bc669ed238b9456b8bfc9bc724fc4fa1",
+  "goal": "比较 Atlas 与 Boreal 的离线部署、审计和三年成本，引用原文",
+  "provider": "demo",
+  "status": "completed",
+  "version": 23,
+  "created_at": 1792285733.2171583,
+  "snapshot": "8bad40a20d2c3072fb2a3409ee56e8dc3856a0782506f1e2ab6d0e09e6e17a6d",
+  "steps": 9,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "plan": [
+    "检索示例需求与两家供应商资料",
+    "读取证据并计算三年费用",
+    "检查引用并提交待审阅报告"
+  ],
+  "report": {
+    "claims": [
+      {
+        "citations": [
+          {
+            "chunk_id": "3aa08c28cdf1a1658422fe27f93b05241f7ecd47eec2a1f4a77d24714bdc790c:1",
+            "quote": "Boreal purchase price is 1500 USD per device and annual support is 120 USD."
+          }
+        ],
+        "text": "示例资料记载：Boreal purchase price is 1500 USD per device and annual support is 120 USD."
+      },
+      {
+        "citations": [
+          {
+            "chunk_id": "3bffcc7906e4039c5114af343b8ba9dc25f68d7941903e69ab7aacc5914f0556:3",
+            "quote": "The three-year cost model is purchase price plus three times the annual support charge."
+          }
+        ],
+        "text": "示例资料记载：The three-year cost model is purchase price plus three times the annual support charge."
+      },
+      {
+        "citations": [
+          {
+            "chunk_id": "fd10db3a3e1f8871f79f183270edc648ea20a497fafaa417a1d8dbd591dad379:1",
+            "quote": "Atlas purchase price is 1200 USD per device and annual support is 240 USD."
+          }
+        ],
+        "text": "示例资料记载：Atlas purchase price is 1200 USD per device and annual support is 240 USD."
+      }
+    ],
+    "limitations": [
+      "全部供应商与价格为虚构演示数据；本模式使用确定性规则，不代表大模型能力评测。",
+      "引用检查验证出处与原文匹配，不保证结论语义必然成立；仍需人工判断。",
+      "实机延迟、长期稳定性、安全认证和实际报价均未验证。"
+    ],
+    "recommendation": "两种方案都声明支持离线和本地审计。请结合下方计算回执比较费用，在审计格式、延迟和现场验收完成前保留最终采购决策。",
+    "status": "supported",
+    "title": "Atlas / Boreal 网关选型演示（虚构资料）",
+    "validation": {
+      "check": "provenance_passed",
+      "citation_count": 3,
+      "source_count": 3
+    }
+  },
+  "approval": {
+    "digest": "8cb057f7db46f98b2d94f40e636d9307ef23297371b4771ad6f409b31213660e",
+    "expires_at": 1792289333.3658834,
+    "payload": {
+      "action_key": "ticket:bc669ed238b9456b8bfc9bc724fc4fa1",
+      "body": "# Atlas / Boreal 网关选型演示（虚构资料）\n\nStatus: supported\n\n两种方案都声明支持离线和本地审计。请结合下方计算回执比较费用，在审计格式、延迟和现场验收完成前保留最终采购决策。\n\n## Claim 1\n示例资料记载：Boreal purchase price is 1500 USD per device and annual support is 120 USD.\n> Boreal purchase price is 1500 USD per device and annual support is 120 USD.\nSource chunk: 3aa08c28cdf1a1658422fe27f93b05241f7ecd47eec2a1f4a77d24714bdc790c:1\n\n## Claim 2\n示例资料记载：The three-year cost model is purchase price plus three times the annual support charge.\n> The three-year cost model is purchase price plus three times the annual support charge.\nSource chunk: 3bffcc7906e4039c5114af343b8ba9dc25f68d7941903e69ab7aacc5914f0556:3\n\n## Claim 3\n示例资料记载：Atlas purchase price is 1200 USD per device and annual support is 240 USD.\n> Atlas purchase price is 1200 USD per device and annual support is 240 USD.\nSource chunk: fd10db3a3e1f8871f79f183270edc648ea20a497fafaa417a1d8dbd591dad379:1\n\n## Limitations\n- 全部供应商与价格为虚构演示数据；本模式使用确定性规则，不代表大模型能力评测。\n- 引用检查验证出处与原文匹配，不保证结论语义必然成立；仍需人工判断。\n- 实机延迟、长期稳定性、安全认证和实际报价均未验证。\n",
+      "run_id": "bc669ed238b9456b8bfc9bc724fc4fa1",
+      "snapshot": "8bad40a20d2c3072fb2a3409ee56e8dc3856a0782506f1e2ab6d0e09e6e17a6d",
+      "title": "Atlas / Boreal 网关选型演示（虚构资料）",
+      "type": "create_local_ticket"
+    }
+  },
+  "evidence": [
+    {
+      "document_id": "3aa08c28cdf1a1658422fe27f93b05241f7ecd47eec2a1f4a77d24714bdc790c",
+      "id": "3aa08c28cdf1a1658422fe27f93b05241f7ecd47eec2a1f4a77d24714bdc790c:1",
+      "sha256": "925f6ed9e3b0cdf89f42182bfba9e6171dcd99b43d2de8b07769a5e2c7030594",
+      "source": "03-boreal.md",
+      "text": "Boreal purchase price is 1500 USD per device and annual support is 120 USD. Boreal supports offline operation, exports local audit logs, and states a three-year support period.",
+      "title": "Boreal gateway / 虚构方案 B"
+    },
+    {
+      "document_id": "3aa08c28cdf1a1658422fe27f93b05241f7ecd47eec2a1f4a77d24714bdc790c",
+      "id": "3aa08c28cdf1a1658422fe27f93b05241f7ecd47eec2a1f4a77d24714bdc790c:2",
+      "sha256": "28351989bb1e7eff78f4f9d6c8a9e26b5e4e6b6b564c0746f85195a943487807",
+      "source": "03-boreal.md",
+      "text": "Boreal has not supplied an independently verified acquisition-latency result. The offline audit export format still needs an integration acceptance test.",
+      "title": "Boreal gateway / 虚构方案 B"
+    },
+    {
+      "document_id": "3bffcc7906e4039c5114af343b8ba9dc25f68d7941903e69ab7aacc5914f0556",
+      "id": "3bffcc7906e4039c5114af343b8ba9dc25f68d7941903e69ab7aacc5914f0556:3",
+      "sha256": "f464ebb7627f47eff003d6deddfb093d25991cc9b1d4a5b7c715525d7bfccd40",
+      "source": "01-requirements.md",
+      "text": "The three-year cost model is purchase price plus three times the annual support charge. Physical-device latency, long-term reliability, and security certifications require independent acceptance tests.",
+      "title": "Gateway procurement requirements / 演示项目需求"
+    },
+    {
+      "document_id": "fd10db3a3e1f8871f79f183270edc648ea20a497fafaa417a1d8dbd591dad379",
+      "id": "fd10db3a3e1f8871f79f183270edc648ea20a497fafaa417a1d8dbd591dad379:1",
+      "sha256": "4e5e55dd25bdef4a4b5465a686257143c9c34c6b3c5669a6f013be19221f926c",
+      "source": "02-atlas.md",
+      "text": "Atlas purchase price is 1200 USD per device and annual support is 240 USD. Atlas supports offline operation and writes local audit records. The stated support period is three years.",
+      "title": "Atlas gateway / 虚构方案 A"
+    }
+  ],
+  "calculations": [
+    {
+      "expression": "1200 + 3 * 240",
+      "value": "1920"
+    },
+    {
+      "expression": "1500 + 3 * 120",
+      "value": "1860"
+    }
+  ],
+  "tool_errors": 0,
+  "error": null,
+  "ticket_id": "ticket-bc669ed238b9456b8bfc9bc724fc4fa1"
+}

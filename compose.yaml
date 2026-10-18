@@ -1,0 +1,25 @@
+services:
+  agent:
+    build: .
+    ports:
+      - "127.0.0.1:8090:8090"
+    environment:
+      AGENT_API_TOKEN: ${AGENT_API_TOKEN:?Set a random API token in .env}
+      AGENT_APPROVAL_TOKEN: ${AGENT_APPROVAL_TOKEN:?Set a different random approval token in .env}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-}
+    volumes:
+      - agent-data:/app/data
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 64
+    restart: unless-stopped
+volumes:
+  agent-data:
